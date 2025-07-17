@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Poppins;
+    @apply select-none;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-gray-400;
+    border-radius: 10px;
+}
