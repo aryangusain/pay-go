@@ -41,7 +41,7 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
-      <ToastContainer position="top-center" />
+      <ToastContainer position="top-right" draggable={true} closeOnClick={true} autoClose={3000}/>
     </div>
   );
 }
