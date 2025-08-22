@@ -14,7 +14,7 @@ function Dashboard() {
   const [filter, setFilter] = useState("");
 
   useEffect(() => {
-      axios.get("http://localhost:3000/api/v1/user/bulk?filter=" + filter)
+      axios.get("https://pay-go-snowy.vercel.app/api/v1/user/bulk?filter=" + filter)
           .then(response => {
               setUsers(response.data.user)
           })
@@ -26,7 +26,7 @@ function Dashboard() {
     const fetchBalance = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('http://localhost:3000/api/v1/account/balance', {
+        const response = await axios.get('https://pay-go-snowy.vercel.app/api/v1/account/balance', {
           headers: { Authorization: `Bearer ${token}` }
         });
         setBalance(response.data.balance);

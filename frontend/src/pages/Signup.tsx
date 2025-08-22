@@ -19,7 +19,7 @@ function Signup() {
   async function handleSignup(e: any) {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3000/api/v1/user/signup', formData);
+      const response = await axios.post('https://pay-go-snowy.vercel.app/api/v1/user/signup', formData);
       console.log(response.data);
   
       if(response.status === 200) {

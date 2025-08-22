@@ -28,7 +28,7 @@ function Signin() {
   async function handleSignin(e: React.FormEvent) {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3000/api/v1/user/signin', formData);
+      const response = await axios.post('https://pay-go-snowy.vercel.app/api/v1/user/signin', formData);
       console.log(formData);
   
       console.log(response.data);
