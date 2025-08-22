@@ -1,4 +1,4 @@
-import express, { Request, Response }  from "express";
+import express from "express";
 import cors from 'cors';
 import { connectDb } from "./db";
 import { accountRouter, userRouter } from "./routes";
@@ -19,6 +19,8 @@ async function main() {
     app.listen(port, () => {
         console.log(`server is running at port ${port}`)
     })
+
+    app.get('/', (req, res) => res.status(200).json({message: "Server is running"}))
 }
 
 main();
